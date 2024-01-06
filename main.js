@@ -12,7 +12,7 @@ const {
 // 初始化OpenAI客户端
 const openai = new OpenAI({
   baseURL: "https://api.chatanywhere.com.cn",
-  apiKey: "your-api-key",
+  apiKey: "你的 apiKey",
 });
 
 // 获取简历信息
