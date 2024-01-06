@@ -1,0 +1,17 @@
+1.精通 React/ Vue2/3 框架开发，以及源码，周边生态
+2.精通 Nuxt3，SSR 服务端渲染技术
+3.精通前端工程化工具 Vite,Webpack、Vite、Esbuild、Rollup、PostCss、Babel、Swc
+4.精通 Nodejs,API层,libuv层，V8引擎层，编写C++ Napi,addon
+5.精通移动端开发 H5 Hybrid混合开发，flutter(dart)开发IOS，Android
+6.熟练使用antd,electron,tauri,Nwis，开发桌面程序，编写底层C++ ffi 库提供DLL(动态链接库)
+7.精通微前端，无界，qiankun，深入底层原理，以及webcomponents
+8.精通Linux命令，操作系统底层原理，以及CPU运行原理，包括服务器部署(serverLess)
+9.熟练使用Nestjs，构建服务端应用，包括MQ消息队列，微服务，集群部署，分布式部署
+10.熟练使用Mysql数据库，事务、数据库索引、数据库锁
+11.熟练使用iava的常用开发框架:SpringMVc、SpringSecurity、Mybatis Plus、SpringBoot
+12.熟练使用WebAssembly 可以使用C++ 快速编写wasm 集成web应用
+13.熟练使用TensorFlowJs 机器学习 NLP中文分词
+14.掘金知名作者
+
+
+

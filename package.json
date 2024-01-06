@@ -1,0 +1,13 @@
+{
+  "name": "gpt-job",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./main.js"
+  },
+  "dependencies": {
+    "openai": "^4.24.1",
+    "selenium-webdriver": "^4.16.0"
+  }
+}
