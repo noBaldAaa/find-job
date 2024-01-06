@@ -7,7 +7,7 @@
 
 ## 一、前言
 
-最近在 GitHub 上发现了一个非常有意思的项目：[GitHub 链接](https://github.com/Frrrrrrrrank/auto_job__find__chatgpt__rpa/blob/master/auto_job_find/functions.py)。
+最近在 GitHub 上发现了一个非常有意思的项目：[GitHub 链接](https://github.com/Frrrrrrrrank/auto_job__find__chatgpt__rpa)。
 
 该作者巧妙地结合 `GPT` 和 `RPA` 技术，打造了一个自动投简历助手。这是原作者分享的效果展示视频：[B 站视频链接](https://www.bilibili.com/video/BV1UC4y1N78v/?share_source=copy_web&vd_source=b2608434484091fcc64d4eb85233122d)。
 
