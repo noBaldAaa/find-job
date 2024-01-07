@@ -5,11 +5,13 @@
 3. 修改你自己的简历基本信息.txt
 4. yarn install && yarn start 启动运行
 
+![WechatIMG54679 (1).png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22ca5c6850d946d692d59f8bb74c70ef~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1373&h=788&s=308447&e=png&b=3d7ab8)
+
 ## 一、前言
 
-最近在 GitHub 上发现了一个非常有意思的项目：[GitHub 链接](https://github.com/Frrrrrrrrank/auto_job__find__chatgpt__rpa)。
+最近在 GitHub 上发现了一个非常有意思的项目：[GitHub链接](https://github.com/Frrrrrrrrank/auto_job__find__chatgpt__rpa)。
 
-该作者巧妙地结合 `GPT` 和 `RPA` 技术，打造了一个自动投简历助手。这是原作者分享的效果展示视频：[B 站视频链接](https://www.bilibili.com/video/BV1UC4y1N78v/?share_source=copy_web&vd_source=b2608434484091fcc64d4eb85233122d)。
+该作者巧妙地结合 `GPT` 和 `RPA` 技术，打造了一个自动投简历助手。这是原作者分享的效果展示视频：[B站视频链接](https://www.bilibili.com/video/BV1UC4y1N78v/?share_source=copy_web&vd_source=b2608434484091fcc64d4eb85233122d)。
 
 然而，由于原项目存在以下问题：
 
@@ -17,7 +19,8 @@
 - 运行该项目需要充值 **OpenAI** 账户，而且只支持使用国外的信用卡，国内用户想充钱都没地。
 - 运行该项目还需要配置代理，对一些用户而言可能不太友好。
 
-折腾无果，遂决定使用 **Node.js** 重新实现该项目，并且完全免费、一键运行，无需设置代理：[GitHub 项目地址](https://github.com/noBaldAaa/find-job)。
+折腾无果，遂决定使用 **Node.js** 重新实现该项目，并且完全免费、一键运行，无需设置代理：[GitHub项目地址](https://github.com/noBaldAaa/find-job)。
+
 
 在这个寒冷的招聘季，这个脚本能为您提供一些帮助，为您带来一些温暖。如果您觉得这个项目有价值，希望您能帮忙点个 [star](https://github.com/noBaldAaa/find-job)，将不胜感激。
 
@@ -29,12 +32,12 @@
 2. 等待页面加载完成，找到登录按钮的 `DOM` 节点，模拟用户点击触发登录，等待用户扫码操作。
 3. 在用户成功扫码登录后，进入招聘信息列表页面。
 4. 遍历招聘信息列表，对每一项进行以下操作：
-   - 点击招聘信息，找到该项招聘信息的职位描述信息
-   - 结合上传的简历信息与招聘信息传递给 `GPT`，等待 `GPT` 的响应
-   - 在 `GPT` 响应后，点击“立即沟通”按钮，进入沟通聊天界面
-   - 在聊天界面中找到输入框，将 `GPT` 返回的信息填入聊天框，并触发发送事件
-   - 返回招聘信息列表页面，点击下一项招聘信息
-   - 重复上述步骤，遍历下一项招聘信息的职位描述信息
+    - 点击招聘信息，找到该项招聘信息的职位描述信息
+    - 结合上传的简历信息与招聘信息传递给 `GPT`，等待 `GPT` 的响应
+    - 在 `GPT` 响应后，点击“立即沟通”按钮，进入沟通聊天界面
+    - 在聊天界面中找到输入框，将 `GPT` 返回的信息填入聊天框，并触发发送事件
+    - 返回招聘信息列表页面，点击下一项招聘信息
+    - 重复上述步骤，遍历下一项招聘信息的职位描述信息
 
 ## 三、具体实现
 
@@ -95,6 +98,7 @@ async function main(url, browserType) {
   try {
     // 打开浏览器
     await openBrowserWithOptions(url, browserType);
+
   } catch (error) {
     console.error(`发生错误: ${error}`);
   }
@@ -107,7 +111,7 @@ const browserType = "chrome";
 main(url, browserType);
 ```
 
-### 3.3、找到登录按钮的 DOM 节点并点击
+### 3.3、找到登录按钮的DOM节点并点击
 
 这一步中我们需要找到 **登录按钮** 的 DOM 节点，然后模拟点击登录。
 
@@ -158,7 +162,8 @@ async function main(url, browserType) {
   try {
     // 打开浏览器
     // 点击登录按钮，并等待登录成功
-    +(await logIn());
++   await logIn();
+
   } catch (error) {
     console.error(`发生错误: ${error}`);
   }
@@ -388,7 +393,7 @@ async function main(url, browserType) {
 
 该项目只是简单的将简历信息结合职位信息发送给 GPT，然后用 GPT 的回复发送给招聘者，实际上并没有什么难度，意在抛砖引玉。
 
-这是其实还有更优雅的做法，比如将个人简历当作一个知识库，并用职位信息对该知识库模型进行微调。但由于 [GPT-API-free 项目](https://gitcode.com/chatanywhere/gpt_api_free/overview) 并没有提供该服务，实现这一点需要付费，有充值渠道的朋友可以尝试一下。
+这里其实还有更优雅的做法，比如将个人简历传给 GPT，让 GPT 去提炼有效信息（原作者就是这么做的）。但由于 [GPT-API-free 项目](https://gitcode.com/chatanywhere/gpt_api_free/overview) 并没有提供 [assistant](https://platform.openai.com/docs/assistants/overview) 服务，实现这一点需要付费，有充值渠道的朋友可以尝试一下。
 
 此外，对于有兴趣的朋友，还可以进一步深挖，例如：
 
@@ -398,19 +403,20 @@ async function main(url, browserType) {
 - 自动检测上下文，排除【外包、外派、驻场】等字眼的职位信息
 - ...
 
+
 > 最后，这里重申原作者的观点：
->
+> 
 > 希望不要有人拿着我的脚本割韭菜，都已经被逼到用这种脚本投简历的地步了，还有啥油水可去榨，当个人吧。
 
 ## 五、推荐阅读
-
-1. [从零到亿系统性的建立前端构建知识体系 ✨](https://juejin.cn/post/7145855619096903717)
+1. [从零到亿系统性的建立前端构建知识体系✨](https://juejin.cn/post/7145855619096903717)
 2. [我是如何带领团队从零到一建立前端规范的？🎉🎉🎉](https://juejin.cn/post/7085257325165936648)
-3. [二十张图片彻底讲明白 Webpack 设计理念，以看懂为目的](https://juejin.cn/post/7170852747749621791)
+3. [二十张图片彻底讲明白Webpack设计理念，以看懂为目的](https://juejin.cn/post/7170852747749621791)
 4. [【中级/高级前端】为什么我建议你一定要读一读 Tapable 源码？](https://juejin.cn/post/7164175171358556173)
-5. [前端工程化基石 -- AST（抽象语法树）以及 AST 的广泛应用](https://juejin.cn/post/7155151377013047304)
+5. [前端工程化基石 -- AST（抽象语法树）以及AST的广泛应用](https://juejin.cn/post/7155151377013047304)
 6. [线上崩了？一招教你快速定位问题！](https://juejin.cn/post/7166031357418668040)
 7. [【Webpack Plugin】写了个插件跟喜欢的女生表白，结果.....](https://juejin.cn/post/7160467329334607908)
 8. [从构建产物洞悉模块化原理](https://juejin.cn/post/7147365025047379981)
-9. [Webpack 深度进阶：两张图彻底讲明白热更新原理！](https://juejin.cn/post/7176963906844246074)
-10. [Esbuild 深度调研：吹了三年，能上生产了吗？](https://juejin.cn/post/7310168607342624808)
+9. [Webpack深度进阶：两张图彻底讲明白热更新原理！](https://juejin.cn/post/7176963906844246074)
+10. [Esbuild深度调研：吹了三年，能上生产了吗？](https://juejin.cn/post/7310168607342624808)
+
