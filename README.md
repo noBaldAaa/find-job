@@ -1,11 +1,11 @@
+![WechatIMG54679 (1).png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22ca5c6850d946d692d59f8bb74c70ef~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1373&h=788&s=308447&e=png&b=3d7ab8)
+
 ## 操作步骤
 
 1. 点击链接获取自己免费的 apikey：[GPT-API-free 项目](https://gitcode.com/chatanywhere/gpt_api_free/overview)
 2. 全局搜索【你的 apiKey】字段，替换为你自己的 apikey
 3. 修改你自己的简历基本信息.txt
 4. yarn install && yarn start 启动运行
-
-![WechatIMG54679 (1).png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22ca5c6850d946d692d59f8bb74c70ef~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1373&h=788&s=308447&e=png&b=3d7ab8)
 
 ## 一、前言
 
